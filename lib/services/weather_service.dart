@@ -1,7 +1,7 @@
 import 'package:weather_app/models/weather_model.dart';
 import 'package:http/http.dart' as http;
 
-class WeatherServie {
+class WeatherService {
   Future<WeatherModel> fetchWeatherInformation(String cityName) async {
     const String apiKey = '3be1d1d5ad43ab35ad281ea5024cc506';
     final Uri url = Uri(
