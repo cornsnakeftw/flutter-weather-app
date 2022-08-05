@@ -11,24 +11,41 @@ class WeatherInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        child: Column(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Icon(Icons.wb_sunny, color: Colors.yellow),
-        const SizedBox(height: 10),
-        Text('${weatherModel.main.temp} °C'),
-        const SizedBox(
-          height: 10,
-        ),
-        Text('${weatherModel.name} ', style: TextStyle(fontSize: 20)),
-        const SizedBox(
-          height: 10,
-        ),
-        Text('${weatherModel.weather.first.description} '),
-        const SizedBox(
-          height: 10,
+        Card(
+          shape: RoundedRectangleBorder(
+              side: BorderSide(color: Colors.purple),
+              borderRadius: BorderRadius.circular(10)),
+          child: Container(
+            padding: EdgeInsets.all(16),
+            height: 300,
+            width: 300,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.wb_sunny, color: Colors.yellow, size: 40),
+                const SizedBox(height: 10),
+                Text('${weatherModel.main.temp} °C',
+                    style:
+                        TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text('${weatherModel.name} ', style: TextStyle(fontSize: 20)),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text('${weatherModel.weather.first.description} '),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
+          ),
         ),
       ],
-    ));
+    );
   }
 }

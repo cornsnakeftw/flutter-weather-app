@@ -8,7 +8,7 @@ class WeatherService {
       scheme: 'https',
       host: 'api.openweathermap.org',
       path: 'data/2.5/weather',
-      queryParameters: {'q': cityName, 'appid': apiKey, 'units': 'metrics'},
+      queryParameters: {'q': cityName, 'appid': apiKey, 'units': 'metric'},
     );
 
     http.Response response = await http.get(url);

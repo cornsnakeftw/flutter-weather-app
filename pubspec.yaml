@@ -11,10 +11,10 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https:   
+# Read more about Android versioning at https:
 # In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
 # Read more about iOS versioning at
-# https:   
+# https:
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
@@ -37,11 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   flutter_bloc: ^8.0.1
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -51,7 +51,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
-# following page: https:   
+# following page: https:
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -66,10 +66,10 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https:   
+  # https:
 
   # For details regarding adding assets from package dependencies, see
-  # https:   
+  # https:
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -89,4 +89,4 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https:   
+  # see https:
