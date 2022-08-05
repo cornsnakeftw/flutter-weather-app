@@ -9,7 +9,7 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   late final TextEditingController _controller;
-  bool isCityNameEmpty = true;
+  bool _isCityNameEmpty = true;
 
   @override
 
@@ -20,7 +20,7 @@ class _HomepageState extends State<Homepage> {
     _controller = TextEditingController();
 
     _controller.addListener(() {
-      setState(() => isCityNameEmpty = _controller.text.isEmpty);
+      setState(() => _isCityNameEmpty = _controller.text.isEmpty);
 
       ///the hash is to filter to see the output in debug console
     });
@@ -57,7 +57,9 @@ class _HomepageState extends State<Homepage> {
             ),
             ElevatedButton(
               child: const Text('Search'),
-              onPressed: () {},
+              onPressed: _isCityNameEmpty
+                  ? null
+                  : () {}, //ternary condition uses question mark. short for 'IF-else'
             ),
           ],
         )));
