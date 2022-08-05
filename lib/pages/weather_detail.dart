@@ -29,7 +29,7 @@ class WeatherDetail extends StatelessWidget {
                 if (state is WeatherLoaded) {
                   return WeatherInformation(weatherModel: state.weatherModel);
                 }
-                return const Text('Some error occured while fetching weather.');
+                return Text(state is WeatherError ? state.errorMessage : '');
               }),
         ));
   }

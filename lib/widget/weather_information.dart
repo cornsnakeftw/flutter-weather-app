@@ -20,7 +20,7 @@ class WeatherInformation extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Text('${weatherModel.name} '),
+        Text('${weatherModel.name} ', style: TextStyle(fontSize: 20)),
         const SizedBox(
           height: 10,
         ),
