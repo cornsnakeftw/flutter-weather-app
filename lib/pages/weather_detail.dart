@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/main.dart';
+import 'package:weather_app/widget/weather_information.dart';
 
 class WeatherDetail extends StatelessWidget {
   const WeatherDetail({required this.cityName, Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class WeatherDetail extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Text('$cityName Weather Detail'),
+          child: WeatherInformation(),
         ));
   }
 }

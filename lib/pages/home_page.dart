@@ -23,8 +23,6 @@ class _HomepageState extends State<Homepage> {
 
     _controller.addListener(() {
       setState(() => _isCityNameEmpty = _controller.text.isEmpty);
-
-      ///the hash is to filter to see the output in debug console
     });
   }
 
