@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/main.dart';
+import 'package:weather_app/pages/weather_detail.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -59,7 +61,13 @@ class _HomepageState extends State<Homepage> {
               child: const Text('Search'),
               onPressed: _isCityNameEmpty
                   ? null
-                  : () {}, //ternary condition uses question mark. short for 'IF-else'
+                  : () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  WeatherDetail(cityName: _controller.text)));
+                    }, //ternary condition uses question mark. short for 'IF-else'
             ),
           ],
         )));
