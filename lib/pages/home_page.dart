@@ -1,6 +1,3 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -12,15 +9,20 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   late final TextEditingController _controller;
+  bool isCityNameEmpty = true;
 
   @override
-  /// to detect any changes in the TextField 
+
+  /// to detect any changes in the TextField
   void initState() {
     super.initState();
 
     _controller = TextEditingController();
+
     _controller.addListener(() {
-      print(_controller.text);
+      setState(() => isCityNameEmpty = _controller.text.isEmpty);
+
+      ///the hash is to filter to see the output in debug console
     });
   }
 
@@ -45,6 +47,7 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: TextField(
+                controller: _controller,
                 decoration: InputDecoration(
                     label: Text('City Name'),
                     floatingLabelBehavior: FloatingLabelBehavior.auto,
